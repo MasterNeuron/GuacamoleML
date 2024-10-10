@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"script_MLP_array_ini",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"script_MLP_array_ini",
+  "parent":{
+    "name":"MLP ARRAY",
+    "path":"folders/SCRIPTS/MLP ARRAY.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
