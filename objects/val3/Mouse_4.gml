@@ -1,0 +1,1 @@
+val = get_string_async("PLU 4046:","");

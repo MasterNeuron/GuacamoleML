@@ -1,6 +1,6 @@
 var num = 0;
 // OPEN THE DATA FILE
-var file = file_text_open_read("/Users/inwhy/Desktop/avocado.csv");
+var file = file_text_open_read(working_directory + "/avocado.csv");
 while (!file_text_eof(file))
 {
 	var str = file_text_read_string(file);
@@ -105,83 +105,6 @@ if (global.region[num] = "TotalUS") {global.region[num] = 52;}
 if (global.region[num] = "West") {global.region[num] = 53;}
 if (global.region[num] = "WestTexNewMexico") {global.region[num] = 54;}
 
-// Side 1: Northeast
-if (
-    global.region[num] == 1 ||  // Albany
-    global.region[num] == 5 ||  // Boston
-    global.region[num] == 6 ||  // BuffaloRochester
-    global.region[num] == 17 || // HarrisburgScranton
-    global.region[num] == 18 || // HartfordSpringfield
-    global.region[num] == 29 || // NewYork
-    global.region[num] == 30 || // Northeast
-    global.region[num] == 31 || // NorthernNewEngland
-    global.region[num] == 33 || // Philadelphia
-    global.region[num] == 35 || // Pittsburgh
-    global.region[num] == 50    // Syracuse
-) {
-    global.side[num] = 1;
-}
-
-// Side 2: Midwest
-else if (
-    global.region[num] == 9  || // Chicago
-    global.region[num] == 10 || // CincinnatiDayton
-    global.region[num] == 11 || // Columbus
-    global.region[num] == 14 || // Detroit
-    global.region[num] == 15 || // GrandRapids
-    global.region[num] == 16 || // GreatLakes
-    global.region[num] == 20 || // Indianapolis
-    global.region[num] == 36 || // Plains
-    global.region[num] == 49    // StLouis
-) {
-    global.side[num] = 2;
-}
-
-// Side 3: South
-else if (
-    global.region[num] == 2  || // Atlanta
-    global.region[num] == 3  || // BaltimoreWashington
-    global.region[num] == 8  || // Charlotte
-    global.region[num] == 12 || // DallasFtWorth
-    global.region[num] == 19 || // Houston
-    global.region[num] == 21 || // Jacksonville
-    global.region[num] == 24 || // Louisville
-    global.region[num] == 25 || // MiamiFtLauderdale
-    global.region[num] == 26 || // Midsouth
-    global.region[num] == 27 || // Nashville
-    global.region[num] == 28 || // NewOrleansMobile
-    global.region[num] == 32 || // Orlando
-    global.region[num] == 38 || // RaleighGreensboro
-    global.region[num] == 39 || // RichmondNorfolk
-    global.region[num] == 40 || // Roanoke
-    global.region[num] == 45 || // SouthCarolina
-    global.region[num] == 46 || // SouthCentral
-    global.region[num] == 47 || // Southeast
-    global.region[num] == 51 || // Tampa
-    global.region[num] == 54    // WestTexNewMexico
-) {
-    global.side[num] = 3;
-}
-
-// Side 4: West
-else if (
-    global.region[num] == 4  || // Boise
-    global.region[num] == 7  || // California
-    global.region[num] == 13 || // Denver
-    global.region[num] == 22 || // LasVegas
-    global.region[num] == 23 || // LosAngeles
-    global.region[num] == 34 || // PhoenixTucson
-    global.region[num] == 37 || // Portland
-    global.region[num] == 41 || // Sacramento
-    global.region[num] == 42 || // SanDiego
-    global.region[num] == 43 || // SanFrancisco
-    global.region[num] == 44 || // Seattle
-    global.region[num] == 48 || // Spokane
-    global.region[num] == 53    // West
-) {
-    global.side[num] = 4;
-}
-
 /*
 	show_debug_message(global.date[num]);
 	show_debug_message(global.price[num]);
@@ -208,7 +131,7 @@ global.generation = 1;
 global.simstep = 1;
 global.simstepend = num - 1;
 global.bestel_rating = 0;
-global.maxsteps = 120;
+global.maxsteps = 70;
 global.totalsteps = global.maxsteps;
 global.s = 0;
 
@@ -228,6 +151,3 @@ repeat(num)
 // SET SOME RANDOM NN TO BE THE TOP ONE
 bestel = el;
 bestel.top = 1;
-
-// DROP THE BEAT
-alarm[0] = 1;

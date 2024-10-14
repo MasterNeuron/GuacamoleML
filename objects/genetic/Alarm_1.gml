@@ -21,16 +21,16 @@ for(i = 0; i < array_length(elements); i++) {
 }
 
 // MUTATIONISM
-mimin = 20;
-mimax = 20;
+mimin = 30;
+mimax = 30;
 
 // MUTATION AMOUNT
-mamin = 20;
-mamax = 20;
+mamin = 30;
+mamax = 30;
 
 // MUTATION RATE
-rmin = 20;
-rmax = 20;
+rmin = 30;
+rmax = 30;
 
 // ELITISM
 emin = 3;
